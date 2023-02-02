@@ -1,0 +1,50 @@
+<!-- form con ngmodel -->
+<section class="container p-4">
+  <form class="form">
+    <section class="form-group">
+      <label class="w-100" for="nombre" class="w-100 color-white"> Id</label>
+      <input
+        class="w-100"
+        matInput
+        [(ngModel)]="user.id"
+        name="id"
+        class="w-100 rounded"
+      />
+    </section>
+    <section class="form-group">
+      <label class="w-100">Title</label>
+      <input class="w-100" type="text" name="title" [(ngModel)]="user.title" />
+    </section>
+    <section class="form-group">
+      <label class="w-100">State</label>
+      <input class="w-100" type="text" name="state" [(ngModel)]="user.state" />
+    </section>
+    <section class="form-group">
+      <label class="w-100">Url</label>
+      <input class="w-100" type="text" name="url" [(ngModel)]="user.url" />
+    </section>
+    <label class="w-100">Created_at</label>
+    <input
+      class="w-100"
+      type="text"
+      name="created_at"
+      [(ngModel)]="user.created_at"
+    />
+    <section class="form-group">
+      <label class="w-100">Updated_at</label>
+      <input
+        class="w-100"
+        type="text"
+        name="updated_at"
+        [(ngModel)]="user.updated_at"
+      />
+    </section>
+
+    <section mat-dialog-actions class="d-flex justify-content-end">
+      <button mat-button color="danger" (click)="onNoClick()" class="mx-2">Cancelar</button>
+      <button mat-button [mat-dialog-close]="user" cdkFocusInitial>
+        Guardar
+      </button>
+    </section>
+  </form>
+</section>
